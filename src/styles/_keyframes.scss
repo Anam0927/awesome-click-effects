@@ -282,20 +282,20 @@ $bluish: #408efc;
 
 @for $i from -5 to 5 {
   @keyframes glitter-anim#{$i + 6} {
-    $randomx: randomNumber(-300, 300) * 1%;
-    $randomy: randomNumber(100, 500) * 1%;
+    $randomX: randomNumber(-300, 300) * 1%;
+    $randomY: randomNumber(100, 500) * 1%;
     0% {
       opacity: 0;
       transform: translate(-50%, -50%) scale(0);
     }
     50% {
       opacity: 1;
-      transform: translate($randomx/2, $randomy/2) scale(1);
+      transform: translate(calc($randomX/2), calc($randomY/2)) scale(1);
     }
 
     100% {
       opacity: 0;
-      transform: translate($randomx, $randomy) scale(0.5);
+      transform: translate($randomX, $randomY) scale(0.5);
     }
   }
 }
